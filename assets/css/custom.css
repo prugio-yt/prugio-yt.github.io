@@ -1,0 +1,155 @@
+body {
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-stop {
+    overflow: hidden;
+}
+
+#popup-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.popup-wrapper-hide {
+    background-color: rgba(0,0,0,0);
+    z-index:-1;
+}
+
+.popup-wrapper-show {
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+#popup {
+    position: fixed;
+    max-width: 30em;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: height 0.5s;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.popup-wrapper-hide #popup {
+    height: 0;
+}
+
+.popup-wrapper-show #popup{
+    height: 80vh;
+}
+
+.popup-header,
+.popup-body,
+.popup-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.popup-header p,
+.popup-footer a{
+    margin: auto;
+}
+
+.popup-footer a {
+    color: #2E3842;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.popup-header {
+    height: 10%;
+    border-bottom: 1px solid lightblue;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(46, 56, 66);
+    color: white;
+}
+
+.popup-body {
+    overflow: scroll;
+    height: 80%;
+    border-bottom: 1px solid lightblue;
+    flex-direction: column;
+}
+
+.popup-body div {
+    background-color: rgb(232, 252, 232);
+    margin: 0.5em 0;
+    width: 100%;
+}
+
+.popup-body a {
+    font-weight: bold;
+    color: blue;
+}
+
+.popup-body div p {
+    margin: 0;
+    padding: 0 2em;
+    word-break: keep-all;
+}
+
+.popup-footer {
+    height: 10%;
+    font-size: 1.5em;
+}
+
+.popup-body div p {
+    font-size: 0.8em;
+}
+
+.body-subject {
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 1680px) {
+    .popup-body div p {
+        font-size: 0.8em;
+    }
+
+    .body-subject {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .popup-body div p {
+        font-size: 0.9em;
+    }
+
+    .body-subject {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 736px) {    
+    .popup-body div p {
+        font-size: 1em;
+    }
+
+    .body-subject {
+        font-size: 1.2em;
+    }
+}
