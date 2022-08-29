@@ -43,6 +43,7 @@ body {
 
 .popup-wrapper-hide #popup {
     height: 0;
+    visibility: hidden;
 }
 
 .popup-wrapper-show #popup{
