@@ -154,3 +154,31 @@ body {
         font-size: 1.2em;
     }
 }
+
+
+.date {
+    display: block;
+    height: 1;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    position: relative;
+    text-align: center;
+}
+
+.date:before, .date:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 6rem);
+    border-top: solid 2px;
+    border-top-color: #eeeeee;
+}
+
+.date:before {
+    left: 0;
+}
+
+.date:after {
+    right: 0;
+}
