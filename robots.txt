@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prugio-yt.github.io/sitemap.xml
